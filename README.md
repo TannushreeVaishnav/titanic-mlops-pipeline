@@ -1,6 +1,21 @@
 # Titanic Survival Prediction — MLOps Project
 
+<<<<<<< HEAD
 > **End-to-end MLOps pipeline** featuring ETL with Apache Airflow, a Redis Feature Store, data drift detection, and real-time ML monitoring via Prometheus + Grafana.
+=======
+> **End-to-end MLOps pipeline** featuring ETL with Apache Airflow, a Redis Feature Store, data drift detection, and real-time ML monitoring via Prometheus + Grafana — built on the classic Titanic dataset.
+
+---
+
+## Note
+
+Don't skip this just because of the dataset title. The **Titanic dataset is just a vehicle** — the real focus is the MLOps infrastructure built around it:
+
+- Automated ETL pipelines with **Apache Airflow**
+- Scalable **Feature Store** using Redis
+- **Data Drift Detection** (Kolmogorov-Smirnov test)
+- Real-time **ML Monitoring** with Prometheus metrics + Grafana dashboards
+>>>>>>> f25522a91c6a4aecea540b7fca278574bcf26aec
 
 ---
 
@@ -18,12 +33,34 @@ Grafana ← Prometheus Metrics ← Flask App (localhost:5000) ← KS Drift Detec
 
 ```text
 titanic-mlops/
+<<<<<<< HEAD
 ├── artifacts/model/random_forest/model.pkl
 ├── data/titanic.csv
 ├── dags/titanic_etl_dag.py        # Airflow DAGs
 ├── src/feature_store.py           # RedisFeatureStore class
 ├── application.py                 # Main Flask app (drift + prediction + metrics)
 ├── docker-compose.yml             # PostgreSQL + Redis containers
+=======
+├── artifacts/
+│   └── model/
+│       └── random_forest/
+│           └── model.pkl
+├── data/
+│   └── titanic.csv
+├── dags/                          
+│   └── titanic_etl_dag.py
+├── notebooks/                     
+├── src/
+│   ├── feature_store.py           
+│   ├── logger.py
+│   └── ...
+├── static/                        
+├── templates/
+│   └── index.html                 
+├── application.py                 
+├── docker-compose.yml             
+├── requirements.txt
+>>>>>>> f25522a91c6a4aecea540b7fca278574bcf26aec
 └── README.md
 ```
 
@@ -67,6 +104,7 @@ titanic-mlops/
 
 ---
 
+<<<<<<< HEAD
 ## Screenshots
 
 | Component | Preview |
@@ -76,3 +114,19 @@ titanic-mlops/
 
 ---
 *Acknowledgements: Titanic dataset from Kaggle; Open-source communities for scikit-learn, Flask, Redis, Airflow, Prometheus, and Grafana.*
+=======
+## Output
+### Prediction UI — Survived
+![Prediction UI-Survived](<Screenshot 2026-05-09 095034.png>)
+### Prediction UI — Not Survived
+![Not Survived](<Screenshot 2026-05-09 091524.png>)
+Grafana Dashboard
+![Grafana](<Screenshot 2026-05-09 112501.png>)  
+
+---
+
+## Acknowledgements
+
+- Titanic dataset — Kaggle / public domain
+- scikit-learn, Flask, Redis, Apache Airflow, Prometheus, Grafana open-source communities
+>>>>>>> f25522a91c6a4aecea540b7fca278574bcf26aec
